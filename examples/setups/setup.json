@@ -23,10 +23,10 @@
         },
 
         "instances": {
-            "ImageId": "ami-5d613a34",
+            "ImageId": "ami-${amiId|12345678}",
             "MinCount": 1,
             "MaxCount": 1,
-            "KeyName": "marrie",
+            "KeyName": "%[mySub.reverse:yeKym]",
             "SecurityGroups": ["gate-sg-1"],
             "InstanceType": "t1.micro"
         }
@@ -36,7 +36,7 @@
         "steps": ["d-i", "d-sg"],
 
         "instances": {
-            "InstanceIds": ["${d-i}"]
+            "InstanceIds": ["${instanceId}"]
         },
 
         "securityGroup": {

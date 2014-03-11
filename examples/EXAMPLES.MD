@@ -1,0 +1,1 @@
+aws-setup -l all -g gate -s c-i -p amiID=87654321
