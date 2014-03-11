@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+// load modules
+var path = require("path"),
+    cp   = require("child_process");
+
+// determine the absolute aws-setup directory
+var base = path.resolve(__dirname, "..");
+
+// add base to the NODE_PATH
+process.env.NODE_PATH += ":" + base;
+
+// fork lib/setup.js
+cp.fork(path.join(base, "lib/setup.js"), process.argv.splice(2));

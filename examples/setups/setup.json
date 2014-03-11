@@ -1,0 +1,46 @@
+{
+    "gate": {
+        "steps": ["c-sg", "u-sg", "c-i"],
+
+        "securityGroup": {
+            "GroupName": "gate-sg-1",
+            "Description": "Gate SG 1"
+        },
+
+        "securityGroupIngress": {
+            "GroupName": "gate-sg-1",
+            "IpPermissions": [{
+                "IpProtocol": "tcp",
+                "FromPort": 80,
+                "ToPort": 80,
+                "IpRanges": [{"CidrIp": "0.0.0.0/0"}]
+            }, {
+                "IpProtocol": "tcp",
+                "FromPort": 22,
+                "ToPort": 22,
+                "IpRanges": [{"CidrIp": "0.0.0.0/0"}]
+            }]
+        },
+
+        "instances": {
+            "ImageId": "ami-5d613a34",
+            "MinCount": 1,
+            "MaxCount": 1,
+            "KeyName": "marrie",
+            "SecurityGroups": ["gate-sg-1"],
+            "InstanceType": "t1.micro"
+        }
+    },
+
+    "del_gate": {
+        "steps": ["d-i", "d-sg"],
+
+        "instances": {
+            "InstanceIds": ["${d-i}"]
+        },
+
+        "securityGroup": {
+            "GroupName": "gate-sg-1"
+        }
+    }
+}

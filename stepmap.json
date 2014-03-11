@@ -1,0 +1,117 @@
+{
+    "c-sg": {
+        "class": "EC2",
+        "method": "createSecurityGroup",
+        "config": "securityGroup"
+    },
+    "u-sg": {
+        "class": "EC2",
+        "method": "authorizeSecurityGroupIngress",
+        "config": "securityGroupIngress"
+    },
+    "d-sg": {
+        "class": "EC2",
+        "method": "deleteSecurityGroup",
+        "config": "securityGroup"
+    },
+    "c-i": {
+        "class": "EC2",
+        "method": "runInstances",
+        "config": "instances"
+    },
+    "d-i": {
+        "class": "EC2",
+        "method": "terminateInstances",
+        "config": "instances"
+    },
+    "c-lb": {
+        "class": "ELB",
+        "method": "createLoadBalancer",
+        "config": "loadBalancer"
+    },
+    "c-lbsp": {
+        "class": "ELB",
+        "method": "createLBCookieStickinessPolicy",
+        "config": "stickinessPolicy"
+    },
+    "d-lb": {
+        "class": "ELB",
+        "method": "deleteLoadBalancer",
+        "config": "loadBalancer"
+    },
+    "c-hc": {
+        "class": "ELB",
+        "method": "configureHealthCheck",
+        "config": "healthCheck"
+    },
+    "c-lc": {
+        "class": "AutoScaling",
+        "method": "createLaunchConfiguration",
+        "config": "launchConfig"
+    },
+    "d-lc": {
+        "class": "AutoScaling",
+        "method": "deleteLaunchConfiguration",
+        "config": "launchConfig"
+    },
+    "c-asg": {
+        "class": "AutoScaling",
+        "method": "createAutoScalingGroup",
+        "config": "autoScalingGroup"
+    },
+    "u-asg": {
+        "class": "AutoScaling",
+        "method": "updateAutoScalingGroup",
+        "config": "autoScalingGroupUpdate"
+    },
+    "d-asg": {
+        "class": "AutoScaling",
+        "method": "deleteAutoScalingGroup",
+        "config": "autoScalingGroup"
+    },
+    "c-ddb": {
+        "class": "DynamoDB",
+        "method": "createTable",
+        "config": "table"
+    },
+    "d-ddb": {
+        "class": "DynamoDB",
+        "method": "deleteTable",
+        "config": "table"
+    },
+    "c-dsg": {
+        "class": "RDS",
+        "method": "createDBSecurityGroup",
+        "config": "dbSecurityGroup"
+    },
+    "u-dsg": {
+        "class": "RDS",
+        "method": "authorizeDBSecurityGroupIngress",
+        "config": "dbSecurityGroupIngress"
+    },
+    "d-dsg": {
+        "class": "RDS",
+        "method": "deleteDBSecurityGroup",
+        "config": "dbSecurityGroup"
+    },
+    "c-dbi": {
+        "class": "RDS",
+        "method": "createDBInstance",
+        "config": "database"
+    },
+    "d-dbi": {
+        "class": "RDS",
+        "method": "deleteDBInstance",
+        "config": "database"
+    },
+    "c-t": {
+        "class": "EC2",
+        "method": "createTags",
+        "config": "tags"
+    },
+    "u-ih": {
+        "class": "AutoScaling",
+        "method": "setInstanceHealth",
+        "config": "instanceHealth"
+    }
+}
