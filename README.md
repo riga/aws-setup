@@ -123,7 +123,7 @@ aws-setup -i MyServer.json -p userData=MyData
 
 ## Description
 
-This is what you get when you type `aws-setup --help` (as of version 0.1.6):
+This is what you get when you type `aws-setup --help` (as of version 0.1.7):
 
 ```
 $> aws-setup --help
@@ -133,7 +133,6 @@ $> aws-setup --help
   Options:
 
     -h, --help                       output usage information
-    -c, --credentials-file [FILE]    the location of your AWS credentials, default: ~/.aws/credentials.json
     -d, --setups-dir [DIR]           the location of your setups/ folder, default: ./setups
     -i, --setup-file [FILE]          the setup file, relative to <setups-dir> (no file extension -> json > js), default: setup.(json|js)
     -m, --step-map [FILE]            an additional step mapping json file, relative to <setups-dir>, default: stepmap.json
@@ -141,6 +140,7 @@ $> aws-setup --help
     -g, --group [NAME[,...]]         the group to setup, accepts a list, default: all groups
     -s, --steps [NAME[,...]]         the steps to execute, accepts a list (,) or a list of lists (:), default: all steps
     -p, --payload [KEY=VALUE,[...]]  payload that is parsed into your definitions
+    -c, --config-file [FILE]         the location of your AWS config/credentials, environment variables are used when missing
     -l, --log-level [LEVEL]          the log level, {all,debug,info,warning,error,fatal}, default: info
     -e, --execute                    execute without prompting
     -a, --abort                      abort when a request failed
