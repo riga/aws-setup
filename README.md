@@ -143,6 +143,7 @@ $> aws-setup --help
     -p, --payload [KEY=VALUE,[...]]  payload that is parsed into your definitions
     -l, --log-level [LEVEL]          the log level, {all,debug,info,warning,error,fatal}, default: info
     -e, --execute                    execute without prompting
+    -a, --abort                      abort when a request failed
     -V, --version                    output the version number
 ```
 
