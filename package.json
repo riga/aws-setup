@@ -1,7 +1,7 @@
 {
     "name": "aws-setup",
     "preferGlobal": false,
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": "Marcel Rieger <marcelrieger@icloud.com>",
     "description": "A Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.",
     "keywords": [
