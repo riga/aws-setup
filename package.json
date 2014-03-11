@@ -1,0 +1,30 @@
+{
+    "name": "aws-setup",
+    "preferGlobal": false,
+    "version": "0.0.1",
+    "author": "Marcel Rieger <marcelrieger@icloud.com>",
+    "description": "Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.",
+    "keywords": [
+        "AWS",
+        "Amazon",
+        "setup",
+        "cluster"
+    ],
+    "main": "./lib/setup.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/riga/aws-setup.git"
+    },
+    "dependencies" : {
+        "aws-sdk": "1.8.1",
+        "commander": "2.1.0",
+        "node-oo": "0.1.1",
+        "node.extend": "1.0.9",
+        "nconf": "0.6.9",
+        "winston": "0.7.2"
+    },
+    "engines": {
+        "node": ">= 0.10.20"
+    },
+    "license": "MIT/GPLv2"
+}
