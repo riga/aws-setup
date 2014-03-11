@@ -1,9 +1,9 @@
 {
     "name": "aws-setup",
     "preferGlobal": false,
-    "version": "0.0.4",
+    "version": "0.1.1",
     "author": "Marcel Rieger <marcelrieger@icloud.com>",
-    "description": "Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.",
+    "description": "A Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.",
     "keywords": [
         "AWS",
         "Amazon",
@@ -27,5 +27,8 @@
     "engines": {
         "node": ">= 0.10.20"
     },
-    "license": "MIT/GPL-2.0"
+    "licenses": [
+        "MIT",
+        "GPL-2.0"
+    ]
 }

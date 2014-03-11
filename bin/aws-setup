@@ -6,6 +6,7 @@ var path = require("path"),
 
 // determine the absolute aws-setup directory
 var base = path.resolve(__dirname, "..");
+process.env.base = base;
 
 // add base to the NODE_PATH
 process.env.NODE_PATH += ":" + base;

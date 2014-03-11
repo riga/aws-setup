@@ -26,7 +26,7 @@
             "ImageId": "ami-${amiId|12345678}",
             "MinCount": 1,
             "MaxCount": 1,
-            "KeyName": "%[mySub.reverse:yeKym]",
+            "KeyName": "$(mySub.reverse:yeKym)",
             "SecurityGroups": ["gate-sg-1"],
             "InstanceType": "t1.micro"
         }

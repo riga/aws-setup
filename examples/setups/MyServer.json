@@ -1,0 +1,29 @@
+{
+    "Main": {
+        "steps": ["c-sg", "u-sg", "c-i"],
+
+        "securityGroup": {
+            "GroupName": "main-sg-1",
+            "Description": "Main SG 1"
+        },
+
+        "securityGroupIngress": {
+            "GroupName": "main-sg-1",
+            "IpPermissions": [{
+                "IpProtocol": "tcp",
+                "FromPort": 80,
+                "ToPort": 80,
+                "IpRanges": [{"CidrIp": "0.0.0.0/0"}]
+            }]
+        },
+
+        "instances": {
+            "ImageId": "ami-123d5c4a",
+            "MinCount": 1,
+            "MaxCount": 1,
+            "KeyName": "myKeyPair",
+            "SecurityGroups": ["main-sg-1"],
+            "InstanceType": "t1.micro"
+        }
+    }
+}
