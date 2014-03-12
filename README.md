@@ -123,7 +123,7 @@ aws-setup -i MyServer.json -p userData=MyData
 
 ## Description
 
-This is what you get when you type `aws-setup --help` (as of version 0.1.7):
+This is what you get when you type `aws-setup --help` (as of version 0.1.8):
 
 ```
 $> aws-setup --help
@@ -141,6 +141,7 @@ $> aws-setup --help
     -s, --steps [NAME[,...]]         the steps to execute, accepts a list (,) or a list of lists (:), default: all steps
     -p, --payload [KEY=VALUE,[...]]  payload that is parsed into your definitions
     -c, --config-file [FILE]         the location of your AWS config/credentials, environment variables are used when missing
+    -t, --timeout [SECONDS]          adds delays between the execution of steps, default: 0
     -l, --log-level [LEVEL]          the log level, {all,debug,info,warning,error,fatal}, default: info
     -e, --execute                    execute without prompting
     -a, --abort                      abort when a request failed
