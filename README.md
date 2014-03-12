@@ -123,7 +123,7 @@ aws-setup -i MyServer.json -p userData=MyData
 
 ## Description
 
-This is what you get when you type `aws-setup --help` (as of version 0.1.8):
+This is what you get when you type `aws-setup --help` (as of version 0.1.9):
 
 ```
 $> aws-setup --help
