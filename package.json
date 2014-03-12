@@ -1,9 +1,9 @@
 {
     "name": "aws-setup",
     "preferGlobal": false,
-    "version": "0.1.10",
+    "version": "0.1.11",
     "author": "Marcel Rieger <marcelrieger@icloud.com>",
-    "description": "A Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.",
+    "description": "A Node Module and Command Line Tool for initializing AWS setups via JSON, YAML or JS scripts.",
     "keywords": [
         "AWS",
         "Amazon",
@@ -22,7 +22,8 @@
         "node.extend": "1.0.9",
         "nconf": "0.6.9",
         "winston": "0.7.2",
-        "async": "0.2.10"
+        "async": "0.2.10",
+        "js-yaml": "3.0.2"
     },
     "engines": {
         "node": ">= 0.10.20"

@@ -1,8 +1,8 @@
 # aws-setup
 
-A Node Module and Command Line Tool for initializing AWS setups via scripts or JSON.
+A Node Module and Command Line Tool for initializing AWS setups via JSON, YAML or JS scripts.
 
-It allows you to define your entire AWS server setup, simple or complex, within JSON or JavaScript files.
+It allows you to define your entire AWS server setup, simple or complex, simple files.
 You can use ___variables___ and ___formatters___ if your definitions need to be dynamic!
 
 
@@ -123,7 +123,7 @@ aws-setup -i MyServer.json -p userData=MyData
 
 ## Description
 
-This is what you get when you type `aws-setup --help` (as of version 0.1.10):
+This is what you get when you type `aws-setup --help` (as of version 0.1.11):
 
 ```
 $> aws-setup --help
@@ -134,7 +134,7 @@ $> aws-setup --help
 
     -h, --help                       output usage information
     -d, --setups-dir [DIR]           the location of your setups/ folder, default: ./setups
-    -i, --setup-file [FILE]          the setup file, relative to <setups-dir> (no file extension -> json > js), default: setup.(json|js)
+    -i, --setup-file [FILE]          the setup file, relative to <setups-dir>, default: setup(.json|.yml|.js)
     -m, --step-map [FILE]            an additional step mapping json file, relative to <setups-dir>, default: stepmap.json
     -f, --formatters [FILE]          an additional file containing formatters, relative to <setups-dir>, default: formatters.js
     -g, --group [NAME[,...]]         the group to setup, accepts a list, default: all groups
