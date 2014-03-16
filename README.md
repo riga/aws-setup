@@ -98,12 +98,12 @@ You can even set default values via
 "ImageId": "${amiId|ami-DEFAULTAMIID}"
 ```
 
-Another drawback would be the use of static `UserData` which must be base64 encoded (see [ec2 docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property)). This is a greate usecase for ___formatters___ (`$()`).
+Another drawback would be the use of static `UserData` which must be base64 encoded (see [ec2 docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property)). This is a greate usecase for ___formatters___ (`%{}`).
 
 We can set the `"UserData"` entry to
 
 ```
-"UserData": "$(base64:MyData)"
+"UserData": "%{base64:MyData}"
 ```
 
 `base64` is defined in [formatters.js](https://github.com/riga/aws-setup/blob/master/lib/formatters.js) but you can also use your own ones. See [below](#formatters) for more information.
@@ -111,7 +111,7 @@ We can set the `"UserData"` entry to
 You can even ___combine___ variables and formatters, e.g.
 
 ```
-"UserData": "$(base64:${userData})"
+"UserData": "%{base64:${userData}}"
 ```
 
 plus
@@ -123,7 +123,7 @@ aws-setup -i MyServer.json -p userData=MyData
 
 ## Description
 
-This is what you get when you type `aws-setup --help` (as of version 0.1.11):
+This is what you get when you type `aws-setup --help` (as of version 0.2.0):
 
 ```
 $> aws-setup --help
